@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+## Welcome to Useless Javascript
 
-You can use the [editor on GitHub](https://github.com/racecraftr/racecraftr.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This is based off of my Useless Java projects, which can be found **[here](https://github.com/racecraftr/UselessJava)**. I remade it into javascript, which is very epic - and also very hard. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I will try to commit as many 
 
 ### Markdown
 
