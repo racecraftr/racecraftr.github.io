@@ -36,6 +36,14 @@ PDF of this page: [https://github.com/racecraftr/racecraftr.github.io/blob/main/
   - Using Cloud Storage to store web files
   - Using Google Authentication to manage log-ins
 
+**XINF (Fall 2022 - present)**: a suite of micro utilities that perform common, boilerplate tasks for developers through a simple REST API.
+
+- [https://xinf.dev/](https://xinf.dev/)
+- A REST api to help app writers conveniently get common pieces of information.
+- Written in Go, deployed on Cloud Run, using BigQuery for analytics.
+- Some of these functions are being used by other developers around the world.
+![](./media/xinf-dashboard.png)
+
 ---
 
 # **Education**
@@ -43,6 +51,7 @@ PDF of this page: [https://github.com/racecraftr/racecraftr.github.io/blob/main/
 - College Freshman at the University of Maryland \- College park
   - Majoring in Computer Science with a focus in Machine Learning
   - Part of UMD’s Tactus Choir
+  - Part of UMD's Scholar's program (Environment, Technology, and Economy)
 
 - High School Graduate (Rutgers Preparatory School, Somerset, NJ, USA)
 - GPA: 4.22 (weighted)
@@ -58,7 +67,7 @@ PDF of this page: [https://github.com/racecraftr/racecraftr.github.io/blob/main/
 
 Java/Spring Boot, Go, Dart/Flutter, Python, Kotlin, Javascript, Google Cloud Platform, Latex, VsCode, IntelliJ, GitHub, Xcode, Swift/SwiftUI, Google Docs, Processing(.pde), Neural Networks, Generative AI
 
-- Latex example: https://github.com/racecraftr/racecraftr.github.io/blob/main/latex_example.pdf
+- Latex example: [https://github.com/racecraftr/racecraftr.github.io/blob/main/latex_example.pdf](https://github.com/racecraftr/racecraftr.github.io/blob/main/latex_example.pdf)
 
 # Relevant Projects
 
@@ -87,7 +96,7 @@ Java/Spring Boot, Go, Dart/Flutter, Python, Kotlin, Javascript, Google Cloud Pla
 - Wrote a program that detects edges in images using the Processing Language. This was done by applying a basic matrix transformation on the underlying image.
 - Link to blog post: [https://medium.com/hackerlog/edge-detection-4d42ca234dfb](https://medium.com/hackerlog/edge-detection-4d42ca234dfb)
 
-## Micro Utilities
+## XINF: Micro Utilities
 
 - [https://xinf.dev/](https://xinf.dev/): a suite of micro utilities that perform common, boilerplate tasks for developers.
 - A REST api to help app writers conveniently get common pieces of information.
@@ -149,3 +158,7 @@ Java/Spring Boot, Go, Dart/Flutter, Python, Kotlin, Javascript, Google Cloud Pla
 - Coding in my fun time
 - Ran the Chess Club at school
 
+
+# Other Information
+
+- United States Citizen
