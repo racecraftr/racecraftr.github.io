@@ -1,5 +1,5 @@
 
-PDF of this page: https://github.com/racecraftr/racecraftr.github.io/blob/main/resume.pdf
+PDF of this page: [https://github.com/racecraftr/racecraftr.github.io/blob/main/resume.pdf](https://github.com/racecraftr/racecraftr.github.io/blob/main/resume.pdf)
 
 # **Important Links**
 
