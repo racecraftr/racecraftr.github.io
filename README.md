@@ -56,7 +56,9 @@ PDF of this page:
 
 # **Skills**
 
-Java/Spring Boot, Go, Dart/Flutter, Python, Kotlin, Javascript, Google Cloud Platform, VsCode, IntelliJ, GitHub, Xcode, Swift/SwiftUI, Google Docs, Processing(.pde), Neural Networks, Generative AI
+Java/Spring Boot, Go, Dart/Flutter, Python, Kotlin, Javascript, Google Cloud Platform, Latex, VsCode, IntelliJ, GitHub, Xcode, Swift/SwiftUI, Google Docs, Processing(.pde), Neural Networks, Generative AI
+
+- Latex example: https://github.com/racecraftr/racecraftr.github.io/blob/main/latex_example.pdf
 
 # Relevant Projects
 
@@ -130,8 +132,6 @@ Java/Spring Boot, Go, Dart/Flutter, Python, Kotlin, Javascript, Google Cloud Pla
 - Exploring use of Computer Science as Art
 - Written in the Processing Language
 - Series on [https://medium.com/hackerlog](https://medium.com/hackerlog)
-
-##
 
 # **For fun**
 
