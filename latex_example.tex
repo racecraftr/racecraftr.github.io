@@ -1,0 +1,299 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[left=1.5cm, right=1.5cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathbbol}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\projhelper}{proj}
+\DeclareMathOperator*{\R}{\mathbb{R}}
+
+\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+
+\title{Topics in Math: Writeup 9}
+\author{Avi Gupta}
+\date{}
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{Avi Gupta}}
+\fancyhead[R]{\textbf{savim2020@gmail.com}}
+\fancyfoot[R]{Page {\thepage}}
+
+This {\LaTeX} example is from a mathematics writeup I did in high school,
+for a Calculus III course. If you have any questions, feel free
+to contact me at {\href{mailto:savim2020@gmail.com}{savim2020@gmail.com}}.
+
+% \maketitle
+\begin{enumerate}
+    \item Let $G$ be the rectangular box defined by the inequalities
+    $a \le x \le b$,
+    $c \le y \le d$,
+    $k \le z \le l$.
+    Show that
+    \[\iiint\limits_G f(x)g(y)h(z)\ dV =
+    \left[\int_a^b f(x)\ dx\right]
+    \left[\int_c^d g(y)\ dy\right]
+    \left[\int_k^l h(z)\ dz\right]
+    \]
+    \textbf{Answer}
+
+    We will define some values:
+    \[X = \int_a^b f(x)\ dx\]
+    \[Y = \int_c^d g(y)\ dy\]
+    \[Z = \int_k^l h(z)\ dz\]
+    Because $X$, $Y$, and $Z$ are all definite integrals with constant bounds,
+    they are all constants.
+    \[
+    \left[\int_a^b f(x)\ dx\right]
+    \left[\int_c^d g(y)\ dy\right]
+    \left[\int_k^l h(z)\ dz\right]= XYZ\]
+    \[\iiint\limits_G f(x)g(y)h(z)\ dV = \int_k^l \int_c^d \int_a^b f(x)g(y)h(z)\ dx\ dy\ dz\]
+    $g(y)$ and $h(z)$ are treated as constants with respect to $x$. We can then rewrite this as
+    \[\int_k^l \int_c^d \left[g(y)h(z) \int_a^b f(x)\ dx\right]\ dy\ dz\]
+    \[ = \int_k^l \int_c^d \left(g(y)h(z) X\right)\ dy\ dz\]
+    \[ = X \int_k^l \int_c^d g(y)h(z)\ dy\ dz\]
+    $h(z)$ is treated as a constant with respect to $y$. We can then rewrite this as
+    \[X \int_k^l \left[h(z) \int_{c}^{d} g(y)\ dy\right]\ dz\]
+    \[= X \int_k^l  h(z) Y\ dz\]
+    \[= XY \int_k^l  h(z) \ dz\]
+    \[= XYZ \blacksquare\]
+
+    \item Use the result of the previous exercise to evaluate the following integrals.
+      \begin{enumerate}
+        \item $\displaystyle \iiint\limits_G xy^2 \sin z\ dV$
+        where $\displaystyle G = \left\{(x, y, z) |
+        -1 \le x \le 1,
+        0 \le y \le 1,
+        0 \le z \le \frac{\pi}{2}\right\}$.
+
+        \textbf{Answer}
+
+        \[\iiint\limits_G xy^2 \sin z\ dV
+        = \int_{-1}^{1} \int_{0}^{1} \int_{0}^{\frac{\pi}{2}} xy^2 \sin z\ dz\ dy\ dx\]
+        \[ =
+        \left[\int_{-1}^{1} x\ dx\right]
+        \left[\int_{0}^{1} y^2\ dy\right]
+        \left[\int_{0}^{\frac{\pi}{2}} \sin z\ dz\right]\]
+        Because $x$ is an odd function, $\displaystyle \int_{-1}^{1} x\ dx = 0$.
+        And because $y^2$ and $\sin z$ are continuous fuctions along all real numbers,
+        their integrals exist and are defined.
+        \[ = 0 \left[\int_{0}^{1} y^2\ dy\right]
+        \left[\int_{0}^{\frac{\pi}{2}} \sin z\ dz\right]\]
+        \[ = 0\]
+
+        \item $\displaystyle \iiint\limits_G e^{2x + y - z}\ dV$
+        where $\displaystyle G = \left\{(x, y, z) |
+        0 \le x \le 1,
+        0 \le y \le \ln 3,
+        0 \le z \le \ln 2 \right\}$.
+
+        \textbf{Answer}
+
+        \[\iiint\limits_G e^{2x + y - z}\ dV = \iiint\limits_G
+        \left(e^{2x}\right)
+        \left(e^{y}\right)
+        \left(e^{-z}\right)
+        \ dV
+        \]
+        \[ = \int_{0}^{1} \int_{0}^{\ln 3} \int_{0}^{\ln 2}
+        \left(e^{2x}\right)
+        \left(e^{y}\right)
+        \left(e^{-z}\right)
+        \ dz\ dy\ dx
+        \]
+        \[=
+        \int_{0}^{1} e^{2x}\ dx
+        \int_{0}^{\ln 3} e^{y}\ dy
+        \int_{0}^{\ln 2} e^{-z}\ dz\]
+
+        \[=
+        \left[\frac{1}{2} e^{2x}\right]_{x=0}^1
+        \left[e^y\right]_{y=0}^{\ln 3}
+        \left[-e^{-z}\right]_{z=0}^{\ln 2}\]
+
+        \[ = \frac{1}{2}(e^2 - 1) \left(e^{\ln 3} - 1\right) \left(-e^{-\ln 2} + 1\right)\]
+        \[ - \frac{1}{2}(e^2 - 1) (3 - 1)\left(-\frac{1}{2} + 1\right)\]
+        \[ = \frac{1}{2}(e^2 - 1)(2)\left(\frac{1}{2}\right)\]
+        \[ = \frac{e^2 - 1}{2}\]
+      \end{enumerate}
+
+      \item Let $G$ be the solid in the first octant bounded by the sphere
+      $x^2 + y^2 + z^2 = 4$
+      and the coordinate planes. Find
+      \[\iiint\limits_G xyz\ dV\]
+      using
+      \begin{enumerate}
+        \item Rectangular coordinates
+
+        \textbf{Answer}
+
+        Because we are in the first octant, $x \ge 0$, $y \ge 0$, and $z \ge 0$.
+        \[G = \left\{ (x, y, z) | 0 \le x \le 2,
+        0 \le y \le \sqrt{4 - x^2},
+        0 \le z \le \sqrt{4 - x^2 - y^2} \right\}\]
+        \[\iiint\limits_G xyz\ dV =
+        \int_{0}^{2} \int_{0}^{\sqrt{4 - x^2}} \int_{0}^{\sqrt{4 - x^2 - y^2}} xyz\ dz\ dy\ dx\]
+        \[ = \int_{0}^{2} \int_{0}^{\sqrt{4 - x^2}}
+        \left[\frac{1}{2} xyz^2\right]_{z = 0}^{\sqrt{4 - x^2 - y^2}}\ dy\ dx\]
+        \[ = \frac{1}{2} \int_{0}^{2} \int_{0}^{\sqrt{4 - x^2}} xy(4 - x^2 - y^2)\ dy\ dx\]
+        \[ = \frac{1}{2} \int_{0}^{2} \int_{0}^{\sqrt{4 - x^2}} (4xy - x^3 y - x y^3 )\ dy\ dx\]
+        \[ = \frac{1}{2} \int_{0}^{2}
+        \left[2xy^2 - \frac{1}{2}x^3y^2 - \frac{1}{4}xy^4\right]_{y = 0}^{\sqrt{4 - x^2}}\ dx\]
+        \[ = \frac{1}{2} \int_{0}^{2}
+        \left(2x(4 - x^2) - \frac{1}{2}x^3(4-x^2) - \frac{1}{4}x(4 - x^2)^2\right)\ dx\]
+        \[ = \frac{1}{2} \int_{0}^{2}
+        \left((8x - 2x^3) - \frac{1}{2}(4x^3 - x^5) - \frac{1}{4}(16x - 8x^3 + x^5)\right)\ dx
+        \]
+        \[ = \frac{1}{2} \int_{0}^{2}
+        \left( 8x - 2x^3 - 2x^3 + \frac{1}{2}x^5 - 4x + 2x^3 - \frac{1}{4}x^5\right)\ dx
+        \]
+        \[ = \frac{1}{2} \int_{0}^{2}\left(\frac{1}{4}x^5 - 2x^3 + 4x\right)\ dx\]
+        \[ = \frac{1}{2} \left[\frac{1}{24}x^6 - \frac{1}{2}x^4 + 2x^2\right]_0^2\]
+        \[ = \frac{1}{2} \left(\frac{64}{24} - \frac{16}{2} + 2(2)^2\right)\]
+        \[ = \frac{1}{2} \left(\frac{8}{3} - 8 + 8\right)\]
+        \[ = \frac{1}{2} \cdot \frac{8}{3} = \frac{4}{3}\]
+        % \[ = \frac{1}{2} \int_{0}^{2}
+        % \left((8x - 4x^2) - \frac{1}{2}(4x^3-x^5) - \frac{1}{4}(16 - 8x^2 + x^4)\right)\ dx\]
+        % \[ = \frac{1}{2} \int_{0}^{2}
+        % \left( \frac{1}{2}x^5 - \frac{1}{4}x^4 - 2x^3 - 2x^2 + 8x - 4\right)\ dx\]
+        % \[ = \frac{1}{2} \left[
+        %   \frac{1}{12}x^6 - \frac{1}{20}x^5 - \frac{1}{2}x^4 - \frac{2}{3}x^3 + 4x^2 - 4x
+        % \right]_0^2\]
+        % \[ = \frac{1}{2} \left(
+        %   \frac{64}{12} - \frac{32}{20} - \frac{16}{2} - \frac{16}{3} + 4(4) - 4(2)
+        % \right)\]
+        % \[ = \frac{32}{12} - \frac{16}{20} - \frac{8}{2} - \frac{8}{3} + 2(4) - 2(2)\]
+        % \[ = \frac{8}{3} - \frac{4}{5} - 4 - \frac{8}{3} + 8 - 4\]
+
+        \item Cylindrical Cooridnates
+
+        \textbf{Answer}
+
+        The sphere has a radius of $2$. Because we are in the first octant,
+        $\displaystyle 0 \le \theta \le \frac{\pi}{2}$.
+        \[G = \left\{ (r, \theta, z) | 0 \le r \le 2,
+        0 \le \theta \le \frac{\pi}{2},
+        0 \le z \le \sqrt{4 - r^2} \right\}\]
+        \[\iiint\limits_G xyz\ dV
+        = \int_{0}^{\frac{\pi}{2}} \int_{0}^{2} \int_{0}^{\sqrt{4 - r^2}}
+        \left(r \cos \theta\right) \left(r \sin \theta\right) zr\ dz\ dr\ d\theta\]
+        \[ = \int_{0}^{\frac{\pi}{2}} \int_{0}^{2} \int_{0}^{\sqrt{4 - r^2}}
+        r^3z \sin (\theta) \cos (\theta)\ dz\ dr\ d\theta\]
+        \[ = \int_{0}^{\frac{\pi}{2}} \int_{0}^{2} \int_{0}^{\sqrt{4 - r^2}}
+        \frac{1}{2}r^3z \sin (2\theta)\ dz\ dr\ d\theta\]
+        \[ = \frac{1}{2}\int_{0}^{\frac{\pi}{2}} \int_{0}^{2}
+        \left[\frac{1}{2}r^3 z^2 \sin (2\theta)\right]_{z = 0}^{\sqrt{4 - r^2}}\ dr\ d\theta\]
+        \[ = \frac{1}{4} \int_{0}^{\frac{\pi}{2}} \int_{0}^{2}
+        \left[r^3 z^2 \sin (2\theta)\right]_{z = 0}^{\sqrt{4 - r^2}}\ dr\ d\theta\]
+
+        \[ = \frac{1}{4} \int_{0}^{\frac{\pi}{2}} \int_{0}^{2}
+        r^3 (4 - r^2) \sin(2 \theta)\ dr\ d\theta\]
+        \[ = \frac{1}{4}
+        \left[\int_{0}^{\frac{\pi}{2}} \sin (2 \theta)\ d\theta\right]
+        \left[\int_{0}^{2} (4r^3 - r^5)\ dr\right]
+        \]
+        \[ = \frac{1}{4}
+        \left[- \frac{1}{2} \cos (2 \theta)\right]_0^{\frac{\pi}{2}}
+        \left[r^4 - \frac{1}{6}r^6\right]_0^2\]
+        \[ = -\frac{1}{8}
+        \left[\cos (2 \theta)\right]_0^{\frac{\pi}{2}}
+        \left(16 - \frac{64}{6}\right)\]
+        \[ - \frac{1}{8} \left(-1 - 1\right) \left(16 - \frac{64}{6}\right)\]
+        \[ = \frac{1}{4} \left(16 - \frac{64}{6}\right)\]
+        \[ = 4 - \frac{16}{6}\]
+        \[ = \frac{12}{3} - \frac{8}{3} = \frac{4}{3}\]
+
+        \item Spherical coordinates
+
+        \textbf{Answer}
+
+        Because we are in the first octant, $\displaystyle 0 \le \theta \le \frac{\pi}{2}$
+        and $\displaystyle 0 \le \varphi \le \frac{\pi}{2}$.
+        \[G = \left\{ (\rho, \theta, \varphi) |
+        0 \le \rho \le 2,
+        0 \le \theta \le \frac{\pi}{2},
+        0 \le \varphi \le \frac{\pi}{2} \right\}\]
+        \[\iiint\limits_G xyz\ dV =
+        \int_{0}^{\frac{\pi}{2}} \int_{0}^{\frac{\pi}{2}} \int_{0}^{2}
+        (\rho \sin \varphi \cos \theta) (\rho \sin \varphi \sin \theta)(\rho \cos \varphi)
+        (\rho^2 \sin \varphi)\ d\rho\ d\varphi\ d\theta\]
+        \[ = \int_{0}^{\frac{\pi}{2}} \int_{0}^{\frac{\pi}{2}} \int_{0}^{2}
+        \rho^5 \sin^3 \varphi \cos \varphi \sin \theta \cos \theta\ d\rho\ d\varphi\ d\theta
+        \]
+        \[ = \left[\int_{0}^{\frac{\pi}{2}} \sin \theta \cos \theta\ d\theta\right]
+        \left[\int_{0}^{\frac{\pi}{2}} \sin^3 \varphi \cos \varphi\ d\varphi\right]
+        \left[\int_{0}^{2} \rho^5\ d\rho\right]\]
+        \[ = \left[\frac{1}{2}\sin^2 \theta\right]_0^{\frac{\pi}{2}}
+        \left[\frac{1}{4} \sin^4 \varphi\right]_0^{\frac{\pi}{2}}
+        \left[\frac{1}{6}\rho^6\right]_0^2\]
+        \[ = \frac{1}{2} \cdot \frac{1}{4} \cdot \frac{64}{6}\]
+        \[ = \frac{8}{6} = \frac{4}{3}\]
+
+      \end{enumerate}
+
+      \item Evaluate $\iint_R \sin(9x^2 + 4y^2)\ dA$, where $R$ is the region in the first quadrant
+      bounded by the ellipse $9x^2 + 4y^2 = 1$, by making an appropriate change in variables.
+
+      \textbf{Answer}
+
+      Change $x$ and $y$ into terms of $u$ and $v$:
+      \[x = \frac{u}{3}, \quad y = \frac{v}{2}\]
+      \[9x^2 + 4y^2  = u^2 + v^2 = 1\]
+      \[S = \left\{(u, v) | 0 \le u \le 1, 0 \le v \le 1, u^2 + v^2 \le 1\right\}\]
+      Find the Jacobian.
+      \[\left|\frac{\partial(x, y)}{\partial(u, v)}\right|
+      = \begin{vmatrix}
+        \pderiv{x}{u} && \pderiv{x}{v} \\
+        \pderiv{y}{u} && \pderiv{y}{v}
+      \end{vmatrix}
+      = \begin{vmatrix}
+        \frac{1}{3} && 0 \\
+        0 && \frac{1}{2}
+      \end{vmatrix}\]
+      \[\iint\limits_R \sin(9x^2 + 4y^2)\ dA
+      = \iint\limits_S \sin(u^2 + v^2) \left|\begin{matrix}
+        \frac{1}{3} && 0 \\
+        0 && \frac{1}{2}
+      \end{matrix}\right|\ dA\]
+      \[= \frac{1}{6}\iint\limits_S \sin(u^2 + v^2)\ dA\]
+      Because $S$ is a circular region,
+      we can convert the double integral into a double polar integral.
+      \[r^2 = u^2 + v^2\]
+      \[S = \left\{(r, \theta) | 0 \le r \le 1, 0 \le \theta \le \frac{\pi}{2}\right\}\]
+      \[\frac{1}{6}\iint\limits_S \sin(u^2 + v^2)\ dA
+      = \frac{1}{6}\iint\limits_S r \sin(r^2)\ dA
+      = \frac{1}{6}\int_{0}^{\frac{\pi}{2}} \int_{0}^{1} r \sin(r^2)\ dr\ d\theta\]
+      \[ = \frac{1}{6}
+      \left[\int_{0}^{\frac{\pi}{2}}\ d\theta\right]
+      \left[\int_{0}^{1} r \sin(r^2)\ dr\right]\]
+      Use $u$ substitution here.
+      \[u = r^2\]
+      \[du = 2r\ dr\]
+      \[dr = \frac{du}{2r}\]
+      \[\int_0^1 r \sin(r^2)\ dr = \int_{0}^{1} \frac{1}{2} \sin(u)\ du\]
+      \[ = \left[- \frac{1}{2} \cos(r^2)\right]_{r = 0}^1\]
+      \[\frac{1}{6}
+      \left[\int_{0}^{\frac{\pi}{2}}\ d\theta\right]
+      \left[\int_{0}^{1} r \sin(r^2)\ dr\right]
+      = \frac{1}{12}\pi \left[- \frac{1}{2} \cos(r^2)\right]_{r = 0}^1\]
+      \[ = - \frac{1}{24}\pi\left(\cos 1 - \cos 0\right)\]
+      \[ =  \frac{1}{24}\pi\left(\cos 0 - \cos 1\right)\]
+      \[ =  \frac{1}{24}\pi\left(1 - \cos 1\right)\]
+\end{enumerate}
+\end{document}
