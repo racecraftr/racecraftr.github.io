@@ -4,6 +4,7 @@ PDF of this page: [https://github.com/racecraftr/racecraftr.github.io/blob/main/
 # **Important Links**
 
 - Mail: savim2020@gmail.com
+- LinkedIn: [https://www.linkedin.com/in/avi-gupta-ag/](https://www.linkedin.com/in/avi-gupta-ag/)
 - GitHub: [https://github.com/racecraftr](https://github.com/racecraftr)
 - Blogs: [https://medium.com/@savim2020](https://medium.com/@savim2020) and [https://medium.com/hackerlog](https://medium.com/hackerlog)
 - YouTube: [https://www.youtube.com/channel/UCbfng4kyQt2QEzXktgCECDw](https://www.youtube.com/channel/UCbfng4kyQt2QEzXktgCECDw)
@@ -25,7 +26,7 @@ PDF of this page: [https://github.com/racecraftr/racecraftr.github.io/blob/main/
 
 - [https://gradzilla.app](https://gradzilla.app)
 - Video demo: [https://youtu.be/BgpLiC7i-I8](https://youtu.be/BgpLiC7i-I8)
-  - More natural search using generative AI (Google Gemini)
+  - More natural search using generative AI (Google Gemini) and Retrieval-Augmented Generation
   - Contains course catalogs
   - Can keep context within a chat session
 - Backend written in Spring Boot & Flask
@@ -75,7 +76,7 @@ Java/Spring Boot, Go, Dart/Flutter, Python, Kotlin, Javascript, Google Cloud Pla
 
 - [https://gradzilla.app](https://gradzilla.app): a better college search site based off of Department of Education data
 - Video demo: [https://youtu.be/BgpLiC7i-I8](https://youtu.be/BgpLiC7i-I8)
-  - More natural search using generative AI (Google Gemini)
+  - More natural search using generative AI (Google Gemini) and Retrieval-Augmented Generation
   - Contains course catalogs
   - Can keep context within a chat session
 - Backend written in Spring Boot & Flask
@@ -114,7 +115,7 @@ Java/Spring Boot, Go, Dart/Flutter, Python, Kotlin, Javascript, Google Cloud Pla
   - Esoteric Programming Language Program Generation
   - Making the code as useless as possible
 
-# Untitled App (In progress)
+## Untitled App (In progress)
 
 - Location-based social media app that has the following functionality
   - Asynchronous access to location data
