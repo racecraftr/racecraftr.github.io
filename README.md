@@ -2,6 +2,8 @@ Link to PDF: [https://github.com/racecraftr/racecraftr.github.io/blob/main/resum
 
 # Important Links
 
+Email: avigupta.mail@gmail.com
+
 GitHub: [https://github.com/racecraftr](https://github.com/racecraftr)
 
 LinkedIn: [https://www.linkedin.com/in/avi-gupta-ag/](https://www.linkedin.com/in/avi-gupta-ag/)
