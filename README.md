@@ -70,7 +70,7 @@ Personal Website: [https://xinf.dev/](https://xinf.dev/)
 
 **Java/Spring Boot (7 years)**, **Go (4 years)**, **Dart/Flutter (4 years)**, Python (4 years), Google Cloud Platform (GCP) (3 years), Kotlin (2 years), Javascript (1 year), LaTeX (1 year), VSCode (3 years), IntelliJ (7 years), GitHub (5 years), Xcode (2 years), Swift/SwiftUI (2 years), Google Docs (7 years), Processing(.pde) (5 years), Neural Networks (1 year), Generative AI (Gemini, ChatGPT) (1 year)
 
-- LaTeX example: [https://github.com/racecraftr/racecraftr.github.io/blob/main/latex\_example.pdf](https://github.com/racecraftr/racecraftr.github.io/blob/main/latex_example.pdf)
+- LaTeX example: [https://github.com/racecraftr/racecraftr.github.io/blob/main/latex_example/latex_example.pdf](https://github.com/racecraftr/racecraftr.github.io/blob/main/latex_example/latex_example.pdf)
 
 # Relevant Projects
 
