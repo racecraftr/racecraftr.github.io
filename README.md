@@ -1,11 +1,15 @@
-[https://racecraftr.github.io](https://racecraftr.github.io)
+Link to PDF version: [https://github.com/racecraftr/racecraftr.github.io/blob/main/resume.pdf](https://github.com/racecraftr/racecraftr.github.io/blob/main/resume.pdf)
 
 ## **IMPORTANT LINKS**
 
 **GitHub**: [https://github.com/racecraftr](https://github.com/racecraftr)
+
 **LinkedIn**: [https://www.linkedin.com/in/avi-gupta-ag/](https://www.linkedin.com/in/avi-gupta-ag/)
+
 Blogs: [https://medium.com/@savim2020](https://medium.com/@savim2020) and [https://medium.com/hackerlog](https://medium.com/hackerlog)
+
 YouTube: [https://www.youtube.com/channel/UCbfng4kyQt2QEzXktgCECDw](https://www.youtube.com/channel/UCbfng4kyQt2QEzXktgCECDw)
+
 Personal Website: [https://xinf.dev/](https://xinf.dev/)
 
 ## **EDUCATION**
@@ -51,6 +55,7 @@ University of Maryland \- College Park, MD
 * A REST api to help app writers conveniently get common pieces of information.
 * Written in **Go**, deployed on **Cloud run**, using **BigQuery** for analytics.
 * Some of these functions are being used by other developers around the world.
+![](media/xinf-dashboard.png)
 
 **Winner**, MEGA Hackathon ([https://site.megahack.org/](https://site.megahack.org/)): 	**April 2022**
 
